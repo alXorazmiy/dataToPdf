@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MarketDB</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="forms.css">
+    <link rel="stylesheet" href="table.css">
+    <link rel="stylesheet" href="datatable.css">
+    <script type="text/javascript" src="/eel.js"></script>
+    <style>
+      /* width */
+          ::-webkit-scrollbar {
+            width: 1px;
+          }
+
+          /* Track */
+          ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+          }
+
+          /* Handle */
+          ::-webkit-scrollbar-thumb {
+            background: #555;
+          }
+
+          /* Handle on hover */
+          ::-webkit-scrollbar-thumb:hover {
+            background: #000;
+          }
+    </style>
+  </head>
+
+  <body id = "body"  >
+
+    <div id ="login " class="container_kirish  ">
+        <div  class="login">
+          <div>
+            <img src="icons/database2.png" alt="" class = "image_database" width="100px">
+            <img src="icons/next.png" alt="" class = "image_next">
+            <img src="icons/excel.png" alt="" class = "image_pdf">
+          </div>
+          <p>
+            <img src="icons/user.png" alt="">
+            <input type="text"  id = "login" placeholder="Username" autocomplete="off">
+          </p>
+          <button id = "loginBtn" >
+            Kirish
+          </button>
+        </div>
+    </div>
+
+    <div class="sidebar hidden">
+      <div class="logo-details">
+        <i class="bx icon"><img class = "dashboard_image" src="icons/database.png" alt="" width = "24px" height="24px" ></i>
+          <div class="logo_name">MarketDB</div>
+          <i  id="btn" ><img  class = "dashboard_image dashboard_image_asosiy" src="icons/menu.png" alt="" ></i>
+      </div>
+      <ul class="nav-list">
+        <li>
+          <a href="#">
+            <i class="bx bx-grid-alt"><img  class = "dashboard_image" src="icons/dashboard2.png" alt="" width="20px" height="20px"></i>
+            <span class="links_name">Меню</span>
+          </a>
+           <span class="tooltip">Меню</span>
+        </li>
+        <li>
+         <a href="#">
+           <i class="bx bx-user" ><img class = "dashboard_image" src="icons/user2.png" alt=""></i>
+           <span class="links_name">Бюрмачилар</span>
+         </a>
+         <span class="tooltip">Бюрмачилар</span>
+       </li>
+       <li>
+         <a href="#" id = "button_contract">
+           <i class="bx bx-chat" ><img class = "dashboard_image" src="icons/contract.png" alt=""></i>
+           <span class="links_name">Шартномалар</span>
+         </a>
+         <span class="tooltip">Шартномалар</span>
+       </li>
+       <li>
+         <a href="#">
+           <i class="bx bx-pie-chart-alt-2" ><img class = "dashboard_image" src="icons/shopping_basket.png" alt=""></i>
+           <span class="links_name">Махсулотлар</span>
+         </a>
+         <span class="tooltip">Махсулотлар</span>
+       </li>
+       <li>
+         <a href="#">
+           <i class="bx bx-folder" ><img class = "dashboard_image" src="icons/info.png" alt=""></i>
+           <span class="links_name">Шахсий малумотлар</span>
+         </a>
+         <span class="tooltip">Шахсий малумотлар</span>
+       </li>
+       <li>
+         <a href="#">
+           <i class="bx bx-cart-alt" ><img class = "dashboard_image" src="icons/setting2.png" alt=""></i>
+           <span class="links_name">Созламалар</span>
+         </a>
+         <span class="tooltip">Созламалар</span>
+       </li>
+      </ul>
+    </div>
+    
+
+    <div id = "create_contract" class = "hidden create_contract_container">
+      <button id = "create_contract_button"><img src="icons/add_button.png" alt=""><span>Шартнома яратиш</span></button>
+    </div>
+    
+
+    <div id = "constact" class="container hidden">
+     <div id = "contracts" class = "">
+      <header>Шартнома яратиш</header>
+      <div class = "form2">
+          <div class="form first">
+              <div class="details personal">
+                  <div class="fields" id = "users_fields">
+                      <div class="input-field">
+                          <label>Номи</label>
+                          <input type="text" placeholder="Номини киритинг" required id = "contract_name">
+                      </div>
+                      <div class="input-field">
+                        <label>Адрес (вилоят)</label>
+                        <input type="text" placeholder="Адресни киритинг" required  id = "contract_address1">
+                      </div>
+                      <div class="input-field">
+                        <label>Адрес (туман)</label>
+                        <input type="text" placeholder="Адресни киритинг" required id = "contract_address2">
+                      </div>
+                      <div class="input-field">
+                        <label>Банк Стир</label>
+                        <input type="text" placeholder="Банк Стирни киритинг" required id = "contract_bank">
+                      </div>
+                      <div class="input-field">
+                        <label>Дата 1</label>
+                        <input type="text" placeholder="Дата 1ни киритинг" required id = "contract_data1">
+                      </div>
+                      <div class="input-field">
+                        <label>Инн</label>
+                        <input type="text" placeholder="Иннни киритинг" required id = "contract_inn">
+                      </div>
+                      <div class="input-field">
+                        <label>Дата 3</label>
+                        <input type="text" placeholder="Дата 3ни киритинг" required id = "contract_data3">
+                      </div>
+                      <div class="input-field">
+                          <label>Тел 1</label>
+                          <input type="number" placeholder="Тел 1ни киритинг" required id = "contract_phone1">
+                      </div>
+                      <div class="input-field">
+                        <label>Тел 2</label>
+                        <input type="number" placeholder="Тел 2ни киритинг" required id = "contract_phone2">
+                      </div>
+                  </div>
+              </div>
+
+              
+
+              <button class="nextBtn" id = "contacts_next">
+                  <span class="btnText">Давом этиш</span>
+                  <i class="uil uil-navigator"><img class = "dashboard_image" src="icons/next.png" alt="" style = "margin: 5px 0 0 5px" width="14px" height="14px"></i>
+              </button>
+            
+          </div>
+
+          
+        </div>
+     </div>
+    
+    
+     <div class="hidden" id="users">
+      <header>Бюртмачи</header>
+      <div class = "form2">
+          <div class="form first">
+              <div class="details personal">
+                  <div class="fields" id = "user_fields">
+                      <div class="input-field">
+                          <label>Номи (отправител)</label>
+                          <input type="text" placeholder="Номини киритинг" required id = "users_name">
+                      </div>
+                      <div class="input-field">
+                        <label>Бюртма номери</label>
+                        <input type="text" placeholder="Бюртма номерини киритинг" required  id = "users_address1">
+                      </div>
+                      <div class="input-field">
+                        <label>Шартнома санаси</label>
+                        <input type="text" placeholder="Шартнома санасини киритинг" required id = "users_address2">
+                      </div>
+                      <div class="input-field">
+                        <label>Кабул килувчи (Получател)</label>
+                        <input type="text" placeholder="Кабул килувчини киритинг" required id = "users_bank">
+                      </div>
+                      <div class="input-field">
+                        <label>Адрес</label>
+                        <input type="text" placeholder="Адресни киритинг" required id = "users_data1">
+                      </div>
+                      <div class="input-field">
+                        <label>Пасспорт</label>
+                        <input type="text" placeholder="Пасспортни киритинг" required id = "users_inn">
+                      </div>
+                      <div class="input-field">
+                          <label>Тел 1</label>
+                          <input type="number" placeholder="Тел 1ни киритинг" required id = "users_phone1">
+                      </div>
+                      <div class="input-field">
+                        <label>Тел 2</label>
+                        <input type="number" placeholder="Тел 2ни киритинг" required id = "users_phone2">
+                      </div>
+                      <div class="input-field">
+                        <label>Тел 3</label>
+                        <input type="number" placeholder="Тел 3ни киритинг" required id = "users_phone3">
+                      </div>
+                  </div>
+              </div>
+
+              
+
+              <button class="nextBtn" id = "user_nextBtn">
+                  <span class="btnText">Давом этиш</span>
+                  <i class="uil uil-navigator"><img class = "dashboard_image" src="icons/next.png" alt="" style = "margin: 5px 0 0 5px" width="14px" height="14px"></i>
+              </button>
+            
+          </div>
+
+          
+        </div>
+
+     </div>
+    </div>
+
+
+
+    <div class="add_product hidden " id = "add_product_table">
+      <div class="table_container  " id = "table">
+  
+        <table class="table" id= "table-id">
+          <tr class="table_tr_title">
+            <th class="table_th_id">N</th>
+            <th class="table_th_name">Наименование</th>
+            <th class="table_th_soni">Кол-во</th>
+            <th class="table_th_soni">Вес нетто</th>
+            <th class="table_th_soni">Вес брутто</th>
+            <th class="table_th_soni">Цена за ед.</th>
+            <th class="table_th_soni">Цена</th>
+          </tr>
+          
+         
+        </table>
+      </div>
+      <div class="table_add_product">
+          <div class="table_add_product_items_name" >
+              <label for = "product_name">Номи</label>
+              <input type="text" id ="product_name" placeholder="Номини киритинг" required >
+          </div>
+          <div class="table_add_product_items">
+            <div class="table_add_product_item">
+              <label for = "product_soni">Микдори</label>
+              <input type="text" id ="product_soni" placeholder="Микдорини киритинг" required >
+            </div>
+            <div class="table_add_product_item">
+              <label for = "product_massa1">Вес нетто</label>
+              <input type="text" id ="product_massa1"  required >
+            </div>
+            <div class="table_add_product_item">
+              <label for = "product_massa2">Вес брутто</label>
+              <input type="text" id ="product_massa2"  required >
+            </div>
+            <div class="table_add_product_item">
+              <label for = "product_narxi">Нархи</label>
+              <input type="text" id ="product_narxi" placeholder="Нархини киритинг" required >
+            </div>
+          </div>
+          <div class="table_add_product_buttons">
+              <p id = "table_add_product_button_finish" ><img src="icons/check.png" alt="">Тугатиш</p>
+              <p id = "table_add_product_button_add"><img src="icons/add_button.png" alt=""> Кушиш</p>
+          </div>
+      </div>
+    </div>
+  
+
+  
+  
+    <div class = "container hidden" id = "contract_table">
+      <table id="example" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011-04-25</td>
+                <td>$320,800</td>
+            </tr>
+            <tr>
+              <td>Lael Greer</td>
+              <td>Systems Administrator</td>
+              <td>London</td>
+              <td>21</td>
+              <td>2009-02-27</td>
+              <td>$103,500</td>
+            </tr>
+            <tr>
+                <td>Jonas Alexander</td>
+                <td>Developer</td>
+                <td>San Francisco</td>
+                <td>30</td>
+                <td>2010-07-14</td>
+                <td>$86,500</td>
+            </tr>
+            <tr>
+                <td>Shad Decker</td>
+                <td>Regional Director</td>
+                <td>Edinburgh</td>
+                <td>51</td>
+                <td>2008-11-13</td>
+                <td>$183,000</td>
+            </tr>
+          </tbody>
+          <tfoot>
+              <tr>
+                  <th>Name</th>
+                  <th>Position</th>
+                  <th>Office</th>
+                  <th>Age</th>
+                  <th>Start date</th>
+                  <th>Salary</th>
+              </tr>
+          </tfoot>
+      </table>
+
+    </div>
+
+
+    <script>
+      let sidebar = document.querySelector(".sidebar");
+      let closeBtn = document.querySelector("#btn");
+      
+    
+      closeBtn.addEventListener("click", ()=>{
+        sidebar.classList.toggle("open");
+        menuBtnChange();//calling the function(optional)
+      });
+    
+     
+    
+      // following are the code to change sidebar button(optional)
+      function menuBtnChange() {
+      if(sidebar.classList.contains("open")){
+        closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+      }else {
+        closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+      }
+      }
+    </script>
+    <script src = "main.js" ></script>
+    <script src = "form.js"></script>
+    <script src = "table.js" ></script>
+
+    <script scr = "jquery-3.5.1.js" ></script>
+    <script src = "jquery.dataTables.min.js" ></script>
+  </body>
+</html>

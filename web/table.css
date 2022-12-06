@@ -1,0 +1,140 @@
+
+.add_product {
+    max-width: 900px;
+    left: auto;
+    right: auto;
+}
+
+.table_container {
+    max-width: 900px;
+    height: 300px;
+    border-radius: 6px;
+    overflow-y: scroll;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    
+}
+
+
+
+.table_tr_title {
+    position: fixed;
+    z-index: 100;
+    background: #11101D;
+    width: 900px;
+    transform: translateY(-35px);
+    color: white;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    font-weight: 500;
+}
+
+.table_th_id {
+    width: 50px;
+}
+
+.table_th_name {
+    width: 330px;
+}
+
+.table_th_soni {
+    width: 100px;
+}
+
+.table_tr {
+    border-width: 1px 0 1px 0;
+    width: 880px;
+    margin-top: 5px;
+    border-color: #11101D;
+    border-style: solid;
+}
+
+.table_td {
+    text-align: center;
+    font-weight: 300;
+    font-size: 12px;
+}
+
+.table_add_product {
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    margin-top: 20px;
+    height: 250px;
+}
+
+.table_add_product_items {
+    width: 91%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.table_add_product_item {
+    width: 230px;
+}
+.table_add_product_items_name label {
+    display: block;
+    width: 90%;
+    margin:auto;
+    padding-top: 10px;
+    font-size: 14px;
+}
+.table_add_product_items_name input {
+    width: 90%;
+    margin: auto;
+    display: block;
+    padding: 8px 10px;
+    outline: none;
+}
+
+.table_add_product_item input {
+    width: 95%;
+    margin: auto;
+    display: block;
+    padding: 8px 10px;
+    margin: 0 5px;
+    outline: none;
+}
+
+.table_add_product_item label {
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.table_add_product_buttons {
+    width: 95%;
+    left: auto;
+    right: auto;
+    display: flex;
+    margin-top: 20px;
+    justify-content: right;
+}
+
+.table_add_product_buttons p img {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+}
+
+#table_add_product_button_finish {
+    background: crimson;
+    width: 150px;
+    padding: 8px 10px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#table_add_product_button_add {
+    background: #264ECA;
+    width: 150px;
+    margin-left: 20px;
+    padding: 8px 10px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color:white;
+}
