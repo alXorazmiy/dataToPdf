@@ -10,6 +10,34 @@ const next_page2 = document.querySelector("#next_page2")
 const no_page = document.querySelector("#no_page")
 const no_page1 = document.querySelector("#no_page1")
 
+const close_window = document.querySelector(".close")
+const constact_close = document.querySelector("#constact_close")
+const add_product_close = document.querySelector("#add_product_close")
+const contract_table_close = document.querySelector("#contract_table_close")
+
+
+
+function close_table() {
+	contract_table.classList.add("hidden")
+	add_product.classList.add("hidden")
+	formContainer.classList.add("hidden")
+	create_contract.classList.remove("hidden")
+	create_contract_button.classList.add("hidden")
+}
+
+
+constact_close.addEventListener('click', ()=> {
+	close_table()
+})
+add_product_close.addEventListener('click', ()=> {
+	close_table()
+})
+
+contract_table_close.addEventListener('click', ()=> {
+	close_table()
+})
+
+
 
 let list = []
 let current = 0
@@ -57,6 +85,8 @@ function PrintFunction(id) {
 
 const contract_table_button = document.querySelector("#contract_table_button")
 contract_table_button.addEventListener("click", ()=> {
+	contract_table.classList.remove('hidden')
+	create_contract.classList.add("hidden")
 	show_data()
 })
 

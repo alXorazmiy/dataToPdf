@@ -7,8 +7,8 @@ const dashboard = document.querySelector(".sidebar")
 const formContainer = document.querySelector("#constact")
 const login = document.querySelector(".login")
 const create_contract = document.querySelector("#create_contract")
-
 const contract_table = document.querySelector("#contract_table")
+
 
 
 
@@ -22,8 +22,7 @@ async function get_login_status() {
         dashboard.classList.remove("hidden")
         // formContainer.classList.remove("hidden")
         login.classList.add("hidden")
-        // create_contract.classList.remove("hidden")
-        contract_table.classList.remove("hidden")
+        create_contract.classList.remove("hidden")
     }
    
 }

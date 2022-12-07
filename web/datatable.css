@@ -121,3 +121,14 @@
 .active {
     background: aliceblue;
 }
+
+.close {
+    position: absolute;
+    transform: translate(870px, -70px);
+}
+
+.close button {
+    background: #fff;
+    border: 0;
+    cursor: pointer;
+}

@@ -13,19 +13,28 @@ db = mydb.cursor()
 def pdf(id, value):
     pdf = FPDF(orientation="P", unit='mm', format="A4")
     pdf.add_page()
+    db.execute('SELECT *FROM RecipientInfo WHERE id= :key',{
+        'key': id
+    })
+    result_R_info = db.fetchall()
+    db.execute('SELECT *FROM Info WHERE key= :key',{
+        'key': id
+    })
+    result_info = db.fetchall()
+    # db.execute("SELECT id FROM Info WHERE key= :key", {
+    #     'key': id
+    # })
+    # result_key = db.fetchone()
+    
     db.execute('SELECT *FROM Products WHERE key= :key',{
-        'key': id,
+        'key': id
     })
     result_product = db.fetchall()
     
-    db.execute('SELECT *FROM Info WHERE key= :key',{
-        'key': id,
-    })
-    result_info = db.fetchall()
-    db.execute('SELECT *FROM RecipientInfo WHERE id= :key',{
-        'key': id,
-    })
-    result_R_info = db.fetchall()
+    
+    
+    
+    
     
     db.execute('SELECT *FROM MarketInfo')
     result_asosiy = db.fetchall()

@@ -121,7 +121,7 @@ def insert_data_product(dict):
                 'massa_brutto': dict_baza[str(id)]['vazni2'],
                 'narxi':dict_baza[str(id)]['narxi'],
                 'summa': dict_baza[str(id)]['summa'],
-                "key": info_id_2
+                "key": info_id
                 })
             mydb.commit()
 
@@ -138,7 +138,6 @@ def check_login(text):
     result = db.fetchall()
     
     if login == "xorazmshox1997xorazmiy" or result != []:
-        print("yessssssssssssssss")
         return 1
       
     
