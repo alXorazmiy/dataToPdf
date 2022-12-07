@@ -10,8 +10,19 @@
     <link rel="stylesheet" href="forms.css">
     <link rel="stylesheet" href="table.css">
     <link rel="stylesheet" href="datatable.css">
+    
     <script type="text/javascript" src="/eel.js"></script>
     <style>
+            @font-face {
+              font-family: Montserrat;
+              src: url(fonts/Montserrat.ttf);
+          }
+          * {
+            font-family: Montserrat !important;
+          }
+          body {
+            font-family: Montserrat !important;
+          }
       /* width */
           ::-webkit-scrollbar {
             width: 1px;
@@ -40,8 +51,8 @@
         <div  class="login">
           <div>
             <img src="icons/database2.png" alt="" class = "image_database" width="100px">
-            <img src="icons/next.png" alt="" class = "image_next">
-            <img src="icons/excel.png" alt="" class = "image_pdf">
+            <img src="icons/next2.png" alt="" class = "image_next">
+            <img src="icons/pdf2.png" alt="" class = "image_pdf">
           </div>
           <p>
             <img src="icons/user.png" alt="">
@@ -75,7 +86,7 @@
          <span class="tooltip">Бюрмачилар</span>
        </li>
        <li>
-         <a href="#" id = "button_contract">
+         <a href="#" id = "contract_table_button">
            <i class="bx bx-chat" ><img class = "dashboard_image" src="icons/contract.png" alt=""></i>
            <span class="links_name">Шартномалар</span>
          </a>
@@ -161,7 +172,7 @@
 
               <button class="nextBtn" id = "contacts_next">
                   <span class="btnText">Давом этиш</span>
-                  <i class="uil uil-navigator"><img class = "dashboard_image" src="icons/next.png" alt="" style = "margin: 5px 0 0 5px" width="14px" height="14px"></i>
+                  <i class="uil uil-navigator"><img class = "dashboard_image" src="icons/next2.png" alt="" style = "margin: 5px 0 0 5px" width="14px" height="14px"></i>
               </button>
             
           </div>
@@ -220,7 +231,7 @@
 
               <button class="nextBtn" id = "user_nextBtn">
                   <span class="btnText">Давом этиш</span>
-                  <i class="uil uil-navigator"><img class = "dashboard_image" src="icons/next.png" alt="" style = "margin: 5px 0 0 5px" width="14px" height="14px"></i>
+                  <i class="uil uil-navigator"><img class = "dashboard_image" src="icons/next2.png" alt="" style = "margin: 5px 0 0 5px" width="14px" height="14px"></i>
               </button>
             
           </div>
@@ -284,63 +295,61 @@
   
   
     <div class = "container hidden" id = "contract_table">
-      <table id="example" class="display" style="width:100%">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
+      <div class = "contract_table_search">
+          <div>
+            <input  class = "contract_table_search_input" id = "contract_table_input" placeholder="Кидириш" type="text">
+            <div>
+              <img class = "contract_table_search_image" src="icons/search2.png" alt="">
+            </div>
+          </div>
+      </div>
+      <table id="" class="contact_table" style="width:100%">
+        <thead class = "contact_table_thead">
+            <tr class = "contact_table_thead_tr">
+                <th style="width: 90px;" >Счет</th>
+                <th>Номи</th>
+                <th>Адрес</th>
+                <th>Тел</th>
+                <th style = "width: 30px;">Pdf</th>
+                <th style = "width: 30px;">Print</th>
             </tr>
         </thead>
-        <tbody>
-            <tr>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>Edinburgh</td>
-                <td>61</td>
-                <td>2011-04-25</td>
-                <td>$320,800</td>
-            </tr>
-            <tr>
-              <td>Lael Greer</td>
-              <td>Systems Administrator</td>
-              <td>London</td>
-              <td>21</td>
-              <td>2009-02-27</td>
-              <td>$103,500</td>
-            </tr>
-            <tr>
-                <td>Jonas Alexander</td>
-                <td>Developer</td>
-                <td>San Francisco</td>
-                <td>30</td>
-                <td>2010-07-14</td>
-                <td>$86,500</td>
-            </tr>
-            <tr>
-                <td>Shad Decker</td>
-                <td>Regional Director</td>
-                <td>Edinburgh</td>
-                <td>51</td>
-                <td>2008-11-13</td>
-                <td>$183,000</td>
-            </tr>
-          </tbody>
-          <tfoot>
-              <tr>
-                  <th>Name</th>
-                  <th>Position</th>
-                  <th>Office</th>
-                  <th>Age</th>
-                  <th>Start date</th>
-                  <th>Salary</th>
-              </tr>
-          </tfoot>
-      </table>
+        <tbody class = "contact_table_tbody" id = "contact_table_tbody">
 
+          
+        </tbody>
+      </table>
+      <div class = "contact_table_pagenition">
+        <ul class="contact_table_pagenition_ul">
+          <li class="page-item">
+            <a class="page-link" id = "previos_page2"><img src="icons/left.png " alt="" width="10px" height="10px"></a>
+          </li>
+          <li class="page-item hidden">
+            <a class="page-link " id = "previos_page">1</a>
+          </li>
+          <li class="page-item hidden" id = "no_page1" >
+            <a class="page-link" style = "border: 0">...</a>
+          </li>
+          <li class="page-item ">
+            <a class="page-link active" id = "current_page">1</a>
+          </li>
+          <li class="page-item " >
+            <a class="page-link" id = "next_page">2 </a>
+          </li>
+          <li class="page-item " >
+            <a class="page-link" id = "next_page3">3 </a>
+          </li>
+          <li class="page-item hidden" id = "no_page" >
+            <a class="page-link" style = "border: 0">...</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" id = "last_page" >3</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" id = "next_page2" ><img src="icons/next.png " alt="" width="10px" height="10px"></a>
+          </li>
+        </ul>
+      </div>
     </div>
 
 
@@ -365,11 +374,10 @@
       }
       }
     </script>
+   
     <script src = "main.js" ></script>
     <script src = "form.js"></script>
     <script src = "table.js" ></script>
-
-    <script scr = "jquery-3.5.1.js" ></script>
-    <script src = "jquery.dataTables.min.js" ></script>
+    <script src = "datatable.js" ></script>
   </body>
 </html>

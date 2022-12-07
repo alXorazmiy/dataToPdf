@@ -15,6 +15,22 @@ eel.init(f'{path}\web')
 global dict_baza, info_id ,info_id_2
 dict_baza = {}
 
+
+@eel.expose 
+def get_contract_data():
+    db.execute("SELECT * FROM RecipientInfo")
+    result = db.fetchall()
+    return result
+
+
+@eel.expose 
+def pdf_create(id):
+    pdf(id, 1)
+
+@eel.expose 
+def print_file(id):
+    pdf(id, 2)
+
 @eel.expose                         
 def insert_data_contarct(dict):
     dict_baza = dict

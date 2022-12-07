@@ -11,6 +11,8 @@ const create_contract = document.querySelector("#create_contract")
 const contract_table = document.querySelector("#contract_table")
 
 
+
+
 async function get_login_status() {
     let status = await eel.check_login(loginInput.value)()
     if (status == 1){
