@@ -22,6 +22,43 @@ def get_contract_data():
     result = db.fetchall()
     return result
 
+@eel.expose 
+def get_info():
+    db.execute("SELECT * FROM MarketInfo")
+    result = db.fetchall()
+    global update_if 
+    update_if = result[0][0]
+    return result
+
+@eel.expose 
+def update_info(dict):
+    dict_baza = dict
+    if dict_baza != {}:
+        global update_if 
+        name = dict_baza['1']
+        address = dict_baza['2']
+        address2 = dict_baza['3']
+        bank = dict_baza['4']
+        data1 = dict_baza['5']
+        data2 = dict_baza['6']
+        data3 = dict_baza['7']
+        phone1 = dict_baza['8']
+        phone2 = dict_baza['9']
+        db.execute('UPDATE MarketInfo SET name = :name, address = :address, address2 = :address2, bank = :bank, data1 = :data1, data2 = :data2, data3 = :data3, phone1 = :phone1, phone2 = :phone2 WHERE name = :if', {
+                'name': name,
+                'address': address,
+                'address2': address2,
+                'bank': bank,
+                'data1': data1,
+                'data2': data2,
+                'data3' : data3,
+                'phone1': phone1,
+                'phone2': phone2,
+                "if": update_if
+            })
+        
+        mydb.commit()
+        
 
 @eel.expose 
 def pdf_create(id):

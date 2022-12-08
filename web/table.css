@@ -1,8 +1,10 @@
 
+
 .add_product {
     max-width: 900px;
     left: auto;
     right: auto;
+    margin-top: 20px;
 }
 
 .table_container {
@@ -13,8 +15,6 @@
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
     
 }
-
-
 
 .table_tr_title {
     position: fixed;

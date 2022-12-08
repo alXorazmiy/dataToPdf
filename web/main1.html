@@ -100,7 +100,7 @@
          <span class="tooltip">Махсулотлар</span>
        </li>
        <li>
-         <a href="#">
+         <a href="#"  id = "info_table_button">
            <i class="bx bx-folder" ><img class = "dashboard_image" src="icons/info.png" alt=""></i>
            <span class="links_name">Шахсий малумотлар</span>
          </a>
@@ -364,6 +364,71 @@
     </div>
 
 
+    <div id = "info_table" class="container hidden">
+      <div class="close " id = "info_table_close" >
+        <button><img src="icons/close2.png" alt="" width="25px" height="25px"></button>
+      </div>
+      <div id = "" class = "">
+      <header>Шахсий малумотлар</header>
+      <div class = "form2">
+          <div class="form first">
+              <div class="details personal">
+                  <div class="fields">
+                      <div class="input-field">
+                          <label>Номи</label>
+                          <input type="text" placeholder="Номини киритинг" required id = "info_table_name">
+                      </div>
+                      <div class="input-field">
+                        <label>Адрес (вилоят)</label>
+                        <input type="text" placeholder="Адресни киритинг" required  id = "info_table_address1">
+                      </div>
+                      <div class="input-field">
+                        <label>Адрес (туман)</label>
+                        <input type="text" placeholder="Адресни киритинг" required id = "info_table_address2">
+                      </div>
+                      <div class="input-field">
+                        <label>Банк Стир</label>
+                        <input type="text" placeholder="Банк Стирни киритинг" required id = "info_table_bank">
+                      </div>
+                      <div class="input-field">
+                        <label>Дата 1</label>
+                        <input type="text" placeholder="Дата 1ни киритинг" required id = "info_table_data1">
+                      </div>
+                      <div class="input-field">
+                        <label>Инн</label>
+                        <input type="text" placeholder="Иннни киритинг" required id = "info_table_inn">
+                      </div>
+                      <div class="input-field">
+                        <label>Дата 3</label>
+                        <input type="text" placeholder="Дата 3ни киритинг" required id = "info_table_data3">
+                      </div>
+                      <div class="input-field">
+                          <label>Тел 1</label>
+                          <input type="number" placeholder="Тел 1ни киритинг" required id = "info_table_phone1">
+                      </div>
+                      <div class="input-field">
+                        <label>Тел 2</label>
+                        <input type="number" placeholder="Тел 2ни киритинг" required id = "info_table_phone2">
+                      </div>
+                  </div>
+              </div>
+
+              
+
+              <button class="nextBtn" id = "info_table_save">
+                  <span class="btnText">Саклаш</span>
+                  <i class="uil uil-navigator"><img class = "dashboard_image" src="icons/save.png" alt="" style = "margin: 5px 0 0 5px" width="14px" height="14px"></i>
+              </button>
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+    
+
+
     <script>
       let sidebar = document.querySelector(".sidebar");
       let closeBtn = document.querySelector("#btn");
@@ -390,5 +455,6 @@
     <script src = "form.js"></script>
     <script src = "table.js" ></script>
     <script src = "datatable.js" ></script>
+    <script src = "shaxsiy_table.js" ></script>
   </body>
 </html>

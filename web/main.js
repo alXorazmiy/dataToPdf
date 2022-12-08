@@ -34,6 +34,8 @@ loginBtn.addEventListener("click", ()=> {
 const create_contract_button = document.querySelector("#create_contract_button")
 
 create_contract_button.addEventListener("click", ()=> {
+    close_table()
+    create_contract.classList.add("hidden")
     create_contract.classList.add("hidden")
     formContainer.classList.remove("hidden")
 })
