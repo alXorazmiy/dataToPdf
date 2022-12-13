@@ -21,8 +21,7 @@ const table_input = document.querySelector("#contract_table_input")
 
 
 function close_table() {
-	contract_table.classList.add("hidden")
-	add_product.classList.add("hidden")
+	contract_table.classList.add("hidden")  
 	formContainer.classList.add("hidden")
 	create_contract.classList.remove("hidden")
 	info_table.classList.add("hidden")
@@ -31,13 +30,9 @@ function close_table() {
 
 
 constact_close.addEventListener('click', ()=> {
-	contract.classList.remove("hidden")
-    users.classList.add("hidden")
 	close_table()
 })
-add_product_close.addEventListener('click', ()=> {
-	close_table()
-})
+
 
 contract_table_close.addEventListener('click', ()=> {
 	table_input.value = ''
@@ -45,7 +40,6 @@ contract_table_close.addEventListener('click', ()=> {
 })
 
 info_table_close.addEventListener('click', ()=> {
-    
 	close_table()
 })
 

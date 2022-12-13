@@ -13,6 +13,7 @@ const contract_table = document.querySelector("#contract_table")
 
 
 
+
 async function get_login_status() {
     let status = await eel.check_login(loginInput.value)()
     if (status == 1){
@@ -20,22 +21,25 @@ async function get_login_status() {
         kirish.classList.add("hidden")
         body.setAttribute("style", 'background:#fff')
         dashboard.classList.remove("hidden")
-        // formContainer.classList.remove("hidden")
         login.classList.add("hidden")
         create_contract.classList.remove("hidden")
     }
-   
+    
 }
 loginBtn.addEventListener("click", ()=> {
     get_login_status()
 })
 
 
-const create_contract_button = document.querySelector("#create_contract_button")
 
+
+
+
+
+
+const create_contract_button = document.querySelector("#create_contract_button")
 create_contract_button.addEventListener("click", ()=> {
     close_table()
-    create_contract.classList.add("hidden")
     create_contract.classList.add("hidden")
     formContainer.classList.remove("hidden")
 })
@@ -59,7 +63,7 @@ const contract_phone2 = document.querySelector("#contract_phone2")
 const contract = document.querySelector("#contracts")
 
 
-async function  insert_data_contract() {
+function  insert_data_contract() {
     dict = {
         1: contract_name.value,
         2: contract_address1.value,
@@ -71,20 +75,21 @@ async function  insert_data_contract() {
         8: contract_phone1.value,
         9: contract_phone2.value
     }
-    let status = await eel.insert_data_contarct(dict)()
-    if (status == 1) {
-        contract.classList.add("hidden")
-        users.classList.remove("hidden")
-    }
+    eel.insert_data_contarct(dict)
+    contract_name.value = ''
+    contract_address1.value = ''
+    contract_address2.value = ''
+    contract_bank.value = ''
+    contract_data1.value = ''
+    contract_inn.value = ''
+    contract_data3.value = ''
+    contract_phone1.value = ''
+    contract_phone2.value = ''
 }
 
 
 
 
-nextBtn.addEventListener('click', ()=> {
-    insert_data_contract()
-    }
-)
 
 
 const users = document.querySelector("#users")
@@ -100,7 +105,7 @@ const users_data3 = document.querySelector("#users_phone1")
 const users_phone1 = document.querySelector("#users_phone2")
 const users_phone2 = document.querySelector("#users_phone3")
 
-async function  insert_data_users() {
+function  insert_data_users() {
     dict = {
         1: users_name.value,
         2: users_address1.value,
@@ -112,17 +117,18 @@ async function  insert_data_users() {
         8: users_phone1.value,
         9: users_phone2.value
     }
-    let status = await eel.insert_data_users(dict)()
-    if (status == 1) {
-        formContainer.classList.add("hidden")
-        table.classList.remove("hidden")
-        // error.classList.add("hidden")
-    }
+    eel.insert_data_users(dict)
+    users_name.value = ''
+    users_address1.value = ''
+    users_address2.value = ''
+    users_bank.value = ''
+    users_data1.value = ''
+    users_inn.value = ''
+    users_data3.value = ''
+    users_phone1.value = ''
+    users_phone2.value = ''
 }
 
-usersnextBtn.addEventListener('click', ()=> {
-    insert_data_users()
-})
 
 
 const add_product = document.querySelector(".add_product")
@@ -146,12 +152,12 @@ add_product_button.addEventListener("click", ()=> {
     table_add.innerHTML += `
     <tr class="table_tr">
         <td class="table_td table_th_id">${count}</td>
-        <td class="table_td table_th_name">${product_name.value}</td>
+        <td class="table_td table_th_name" style="text-align: left;">${product_name.value}</td>
         <td class="table_td table_th_soni">${product_soni.value}</td>
         <td class="table_td table_th_soni">${product_massa1.value}</td>
         <td class="table_td table_th_soni">${product_massa2.value}</td>
         <td class="table_td table_th_soni">${product_narxi.value}</td>
-        <td class="table_td table_th_soni">${summa}</td>
+        <td class="table_td table_th_soni" style="text-align: right;">${summa}</td>
     </tr>
     `
     product_dict[count] = {
@@ -172,8 +178,19 @@ add_product_button.addEventListener("click", ()=> {
 
 
 finish_product_button.addEventListener("click", ()=> {
+    insert_data_contract()
+    insert_data_users()
     eel.insert_data_product(product_dict)
-    table.classList.add("hidden")
+    formContainer.classList.add('hidden')
     create_contract.classList.remove("hidden")
-    error.classList.remove("hidden")
+    product_dict= {}
+    table_add.innerHTML= `<tr class="table_tr_title">
+    <th class="table_th_id">N</th>
+    <th class="table_th_name" >Наименование</th>
+    <th class="table_th_soni">Кол-во</th>
+    <th class="table_th_soni">Вес нетто</th>
+    <th class="table_th_soni">Вес брутто</th>
+    <th class="table_th_soni">Цена за ед.</th>
+    <th class="table_th_soni" >Цена</th>
+    </tr>`
 })

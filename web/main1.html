@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="forms.css">
     <link rel="stylesheet" href="table.css">
     <link rel="stylesheet" href="datatable.css">
+    <link rel="icon" type="image/x-icon" href="/icons/editor.png">
     
     <script type="text/javascript" src="/eel.js"></script>
     <style>
@@ -47,384 +48,428 @@
 
   <body id = "body"  >
 
+
+
+    <!-- kirish -->
     <div id ="login " class="container_kirish  ">
         <div  class="login">
-          <div>
-            <img src="icons/database2.png" alt="" class = "image_database" width="100px">
-            <img src="icons/next2.png" alt="" class = "image_next">
-            <img src="icons/pdf2.png" alt="" class = "image_pdf">
-          </div>
-          <p>
-            <img src="icons/user.png" alt="">
-            <input type="text"  id = "login" placeholder="Username" autocomplete="off">
-          </p>
-          <button id = "loginBtn" >
-            Kirish
-          </button>
+            <div>
+                <img src="icons/database2.png" alt="" class = "image_database" width="100px">
+                <img src="icons/next2.png" alt="" class = "image_next">
+                <img src="icons/pdf2.png" alt="" class = "image_pdf">
+            </div>
+            <p>
+                <img src="icons/user.png" alt="">
+                <input type="text"  id = "login" placeholder="Username" autocomplete="off">
+            </p>
+            <button id = "loginBtn" >
+                Kirish
+            </button>
         </div>
     </div>
 
+
+    <!-- Menu -->
     <div class="sidebar hidden">
-      <div class="logo-details">
-        <i class="bx icon"><img class = "dashboard_image" src="icons/database.png" alt="" width = "24px" height="24px" ></i>
-          <div class="logo_name">MarketDB</div>
-          <i  id="btn" ><img  class = "dashboard_image dashboard_image_asosiy" src="icons/menu.png" alt="" ></i>
-      </div>
-      <ul class="nav-list">
-        <li>
-          <a href="#">
-            <i class="bx bx-grid-alt"><img  class = "dashboard_image" src="icons/dashboard2.png" alt="" width="20px" height="20px"></i>
-            <span class="links_name">Меню</span>
-          </a>
-           <span class="tooltip">Меню</span>
-        </li>
-        <li>
-         <a href="#">
-           <i class="bx bx-user" ><img class = "dashboard_image" src="icons/user2.png" alt=""></i>
-           <span class="links_name">Бюрмачилар</span>
-         </a>
-         <span class="tooltip">Бюрмачилар</span>
-       </li>
-       <li>
-         <a href="#" id = "contract_table_button">
-           <i class="bx bx-chat" ><img class = "dashboard_image" src="icons/contract.png" alt=""></i>
-           <span class="links_name">Шартномалар</span>
-         </a>
-         <span class="tooltip">Шартномалар</span>
-       </li>
-       <li>
-         <a href="#">
-           <i class="bx bx-pie-chart-alt-2" ><img class = "dashboard_image" src="icons/shopping_basket.png" alt=""></i>
-           <span class="links_name">Махсулотлар</span>
-         </a>
-         <span class="tooltip">Махсулотлар</span>
-       </li>
-       <li>
-         <a href="#"  id = "info_table_button">
-           <i class="bx bx-folder" ><img class = "dashboard_image" src="icons/info.png" alt=""></i>
-           <span class="links_name">Шахсий малумотлар</span>
-         </a>
-         <span class="tooltip">Шахсий малумотлар</span>
-       </li>
-       <li>
-         <a href="#">
-           <i class="bx bx-cart-alt" ><img class = "dashboard_image" src="icons/setting2.png" alt=""></i>
-           <span class="links_name">Созламалар</span>
-         </a>
-         <span class="tooltip">Созламалар</span>
-       </li>
-      </ul>
+        <div class="logo-details">
+            <i class="bx icon"><img class = "dashboard_image" src="icons/database.png" alt="" width = "24px" height="24px" ></i>
+                <div class="logo_name">MarketDB</div>
+            <i  id="btn" ><img  class = "dashboard_image dashboard_image_asosiy" src="icons/menu.png" alt="" ></i>
+        </div>
+        <ul class="nav-list">
+            <li>
+                <a href="#">
+                    <i class="bx bx-grid-alt"><img  class = "dashboard_image" src="icons/dashboard2.png" alt="" width="20px" height="20px"></i>
+                    <span class="links_name">Меню</span>
+                </a>
+                <span class="tooltip">Меню</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-user" ><img class = "dashboard_image" src="icons/user2.png" alt=""></i>
+                    <span class="links_name">Бюрмачилар</span>
+                </a>
+                <span class="tooltip">Бюрмачилар</span>
+            </li>
+            <li>
+                <a href="#" id = "contract_table_button">
+                    <i class="bx bx-chat" ><img class = "dashboard_image" src="icons/contract.png" alt=""></i>
+                    <span class="links_name">Шартномалар</span>
+                </a>
+                <span class="tooltip">Шартномалар</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-pie-chart-alt-2" ><img class = "dashboard_image" src="icons/shopping_basket.png" alt=""></i>
+                    <span class="links_name">Махсулотлар</span>
+                </a>
+                <span class="tooltip">Махсулотлар</span>
+            </li>
+            <li>
+                <a href="#"  id = "info_table_button">
+                    <i class="bx bx-folder" ><img class = "dashboard_image" src="icons/info.png" alt=""></i>
+                    <span class="links_name">Шахсий малумотлар</span>
+                </a>
+                <span class="tooltip">Шахсий малумотлар</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-cart-alt" ><img class = "dashboard_image" src="icons/setting2.png" alt=""></i>
+                    <span class="links_name">Созламалар</span>
+                </a>
+                <span class="tooltip">Созламалар</span>
+            </li>
+        </ul>
     </div>
 
     
-    
 
+
+
+
+
+
+
+
+
+
+
+
+    
+    <!-- create button -->
     <div id = "create_contract" class = "hidden create_contract_container">
       <button id = "create_contract_button"><img src="icons/add_button.png" alt=""><span>Шартнома яратиш</span></button>
     </div>
     
 
+
+
+
+
+
+
+
+
+
+    <!-- shartnoma form -->
     <div id = "constact" class="container hidden">
-      <div class="close " id = "constact_close" >
-        <button><img src="icons/close2.png" alt="" width="25px" height="25px"></button>
-     </div>
-     <div id = "contracts" class = "">
-      <header>Шартнома яратиш</header>
-      <div class = "form2">
-          <div class="form first">
-              <div class="details personal">
-                  <div class="fields" id = "users_fields">
-                      <div class="input-field">
-                          <label>Номи</label>
-                          <input type="text" placeholder="Номини киритинг" required id = "contract_name">
-                      </div>
-                      <div class="input-field">
-                        <label>Адрес (вилоят)</label>
-                        <input type="text" placeholder="Адресни киритинг" required  id = "contract_address1">
-                      </div>
-                      <div class="input-field">
-                        <label>Адрес (туман)</label>
-                        <input type="text" placeholder="Адресни киритинг" required id = "contract_address2">
-                      </div>
-                      <div class="input-field">
-                        <label>Банк Стир</label>
-                        <input type="text" placeholder="Банк Стирни киритинг" required id = "contract_bank">
-                      </div>
-                      <div class="input-field">
-                        <label>Дата 1</label>
-                        <input type="text" placeholder="Дата 1ни киритинг" required id = "contract_data1">
-                      </div>
-                      <div class="input-field">
-                        <label>Инн</label>
-                        <input type="text" placeholder="Иннни киритинг" required id = "contract_inn">
-                      </div>
-                      <div class="input-field">
-                        <label>Дата 3</label>
-                        <input type="text" placeholder="Дата 3ни киритинг" required id = "contract_data3">
-                      </div>
-                      <div class="input-field">
-                          <label>Тел 1</label>
-                          <input type="number" placeholder="Тел 1ни киритинг" required id = "contract_phone1">
-                      </div>
-                      <div class="input-field">
-                        <label>Тел 2</label>
-                        <input type="number" placeholder="Тел 2ни киритинг" required id = "contract_phone2">
-                      </div>
-                  </div>
-              </div>
-
-              
-
-              <button class="nextBtn" id = "contacts_next">
-                  <span class="btnText">Давом этиш</span>
-                  <i class="uil uil-navigator"><img class = "dashboard_image" src="icons/next2.png" alt="" style = "margin: 5px 0 0 5px" width="14px" height="14px"></i>
-              </button>
-            
-          </div>
-
-          
-        </div>
-     </div>
-    
-    
-     <div class="hidden" id="users">
-      <header>Бюртмачи</header>
-      <div class = "form2">
-          <div class="form first">
-              <div class="details personal">
-                  <div class="fields" id = "user_fields">
-                      <div class="input-field">
-                          <label>Номи (отправител)</label>
-                          <input type="text" placeholder="Номини киритинг" required id = "users_name">
-                      </div>
-                      <div class="input-field">
-                        <label>Бюртма номери</label>
-                        <input type="text" placeholder="Бюртма номерини киритинг" required  id = "users_address1">
-                      </div>
-                      <div class="input-field">
-                        <label>Шартнома санаси</label>
-                        <input type="text" placeholder="Шартнома санасини киритинг" required id = "users_address2">
-                      </div>
-                      <div class="input-field">
-                        <label>Кабул килувчи (Получател)</label>
-                        <input type="text" placeholder="Кабул килувчини киритинг" required id = "users_bank">
-                      </div>
-                      <div class="input-field">
-                        <label>Адрес</label>
-                        <input type="text" placeholder="Адресни киритинг" required id = "users_data1">
-                      </div>
-                      <div class="input-field">
-                        <label>Пасспорт</label>
-                        <input type="text" placeholder="Пасспортни киритинг" required id = "users_inn">
-                      </div>
-                      <div class="input-field">
-                          <label>Тел 1</label>
-                          <input type="number" placeholder="Тел 1ни киритинг" required id = "users_phone1">
-                      </div>
-                      <div class="input-field">
-                        <label>Тел 2</label>
-                        <input type="number" placeholder="Тел 2ни киритинг" required id = "users_phone2">
-                      </div>
-                      <div class="input-field">
-                        <label>Тел 3</label>
-                        <input type="number" placeholder="Тел 3ни киритинг" required id = "users_phone3">
-                      </div>
-                  </div>
-              </div>
-
-              
-
-              <button class="nextBtn" id = "user_nextBtn">
-                  <span class="btnText">Давом этиш</span>
-                  <i class="uil uil-navigator"><img class = "dashboard_image" src="icons/next2.png" alt="" style = "margin: 5px 0 0 5px" width="14px" height="14px"></i>
-              </button>
-            
-          </div>
-
-          
+        <div class="close " id = "constact_close" >
+                <button><img src="icons/close2.png" alt="" width="25px" height="25px"></button>
         </div>
 
-     </div>
+
+
+
+        <!-- shartnoma qo'shish -->
+        <div >
+            <header>Шартнома яратиш</header>
+            <div class = "form2">
+                <div class="form first">
+                    <div class="details personal">
+                        <div class="fields" id = "users_fields">
+                            <div class="input-field">
+                                <label>Номи</label>
+                                <input type="text" placeholder="Номини киритинг" required id = "contract_name">
+                            </div>
+                            <div class="input-field">
+                                <label>Адрес (вилоят)</label>
+                                <input type="text" placeholder="Адресни киритинг" required  id = "contract_address1">
+                            </div>
+                            <div class="input-field">
+                                <label>Адрес (туман)</label>
+                                <input type="text" placeholder="Адресни киритинг" required id = "contract_address2">
+                            </div>
+                            <div class="input-field">
+                                <label>Банк Стир</label>
+                                <input type="text" placeholder="Банк Стирни киритинг" required id = "contract_bank">
+                            </div>
+                            <div class="input-field">
+                                <label>Дата 1</label>
+                                <input type="text" placeholder="Дата 1ни киритинг" required id = "contract_data1">
+                            </div>
+                            <div class="input-field">
+                                <label>Инн</label>
+                                <input type="text" placeholder="Иннни киритинг" required id = "contract_inn">
+                            </div>
+                            <div class="input-field">
+                                <label>Дата 3</label>
+                                <input type="text" placeholder="Дата 3ни киритинг" required id = "contract_data3">
+                            </div>
+                            <div class="input-field">
+                                <label>Тел 1</label>
+                                <input type="number" placeholder="Тел 1ни киритинг" required id = "contract_phone1">
+                            </div>
+                            <div class="input-field">
+                                <label>Тел 2</label>
+                                <input type="number" placeholder="Тел 2ни киритинг" required id = "contract_phone2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+
+        <!-- buyurtmachi qo'shish -->
+        <div>
+            <header>Бюртмачи</header>
+            <div class = "form2">
+                <div class="form first">
+                    <div class="details personal">
+                        <div class="fields" id = "user_fields">
+                            <div class="input-field">
+                                <label>Номи (отправител)</label>
+                                <input type="text" placeholder="Номини киритинг" required id = "users_name">
+                            </div>
+                            <div class="input-field">
+                                <label>Бюртма номери</label>
+                                <input type="text" placeholder="Бюртма номерини киритинг" required  id = "users_address1">
+                            </div>
+                            <div class="input-field">
+                                <label>Шартнома санаси</label>
+                                <input type="text" placeholder="Шартнома санасини киритинг" required id = "users_address2">
+                            </div>
+                            <div class="input-field">
+                                <label>Кабул килувчи (Получател)</label>
+                                <input type="text" placeholder="Кабул килувчини киритинг" required id = "users_bank">
+                            </div>
+                            <div class="input-field">
+                                <label>Адрес</label>
+                                <input type="text" placeholder="Адресни киритинг" required id = "users_data1">
+                            </div>
+                            <div class="input-field">
+                                <label>Пасспорт</label>
+                                <input type="text" placeholder="Пасспортни киритинг" required id = "users_inn">
+                            </div>
+                            <div class="input-field">
+                                
+                                <label>Тел 1</label>
+                                <input type="number" placeholder="Тел 1ни киритинг" required id = "users_phone1">
+                            </div>
+                            <div class="input-field">
+                                <label>Тел 2</label>
+                                <input type="number" placeholder="Тел 2ни киритинг" required id = "users_phone2">
+                            </div>
+                            <div class="input-field">
+                                <label>Тел 3</label>
+                                <input type="number" placeholder="Тел 3ни киритинг" required id = "users_phone3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- mahsulot qo'shish -->
+        <div >
+            <header  style = "margin-bottom: 20px">Махсулот кушиш</header>
+            <div class="table_container  ">
+            <table class="" id= "table-id" >
+                <tr class="table_tr_title">
+                    <th class="table_th_id">N</th>
+                    <th class="table_th_name" >Наименование</th>
+                    <th class="table_th_soni">Кол-во</th>
+                    <th class="table_th_soni">Вес нетто</th>
+                    <th class="table_th_soni">Вес брутто</th>
+                    <th class="table_th_soni">Цена за ед.</th>
+                    <th class="table_th_soni" >Цена</th>
+                </tr>
+            </table>
+            </div>
+            <div class = "form2 form22" style="height: 200px !important;">
+                <div class="form first">
+                    <div class="details personal">
+                        <div class="fields" id = "">
+                            <div class="input-field" style="width: 65%;">
+                                <label for = "product_name">Номи</label>
+                                <input type="text" id ="product_name" placeholder="Номини киритинг" required >
+                            </div>
+                            <div class="input-field">
+                                <label for = "product_soni">Микдори</label>
+                                <input type="text" id ="product_soni" placeholder="Микдорини киритинг" required >
+                            </div>
+                            <div class="input-field">
+                                <label for = "product_massa1">Вес нетто</label>
+                                <input type="text" id ="product_massa1"  required >
+                            </div>
+                            <div class="input-field">
+                                <label for = "product_massa2">Вес брутто</label>
+                                <input type="text" id ="product_massa2"  required >
+                            </div>
+                            <div class="input-field">
+                                <label for = "product_narxi">Нархи</label>
+                                <input type="text" id ="product_narxi" placeholder="Нархини киритинг" required >
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="table_add_product_buttons">
+                <p id = "table_add_product_button_finish" ><img src="icons/check3.png" alt="">Тугатиш</p>
+                <p id = "table_add_product_button_add"><img src="icons/add_button3.png" alt=""> Кушиш</p>
+            </div>
+            
+        </div>
     </div>
 
 
 
-    <div class="add_product hidden " id = "add_product_table">
-    <div class="close " id = "add_product_close" >
-        <button><img src="icons/close2.png" alt="" width="25px" height="25px"></button>
-     </div>
-      <div class="table_container  " id = "table">
-  
-        <table class="table" id= "table-id">
-          <tr class="table_tr_title">
-            <th class="table_th_id">N</th>
-            <th class="table_th_name">Наименование</th>
-            <th class="table_th_soni">Кол-во</th>
-            <th class="table_th_soni">Вес нетто</th>
-            <th class="table_th_soni">Вес брутто</th>
-            <th class="table_th_soni">Цена за ед.</th>
-            <th class="table_th_soni">Цена</th>
-          </tr>
-          
-         
-        </table>
-      </div>
-      <div class="table_add_product">
-          <div class="table_add_product_items_name" >
-              <label for = "product_name">Номи</label>
-              <input type="text" id ="product_name" placeholder="Номини киритинг" required >
-          </div>
-          <div class="table_add_product_items">
-            <div class="table_add_product_item">
-              <label for = "product_soni">Микдори</label>
-              <input type="text" id ="product_soni" placeholder="Микдорини киритинг" required >
-            </div>
-            <div class="table_add_product_item">
-              <label for = "product_massa1">Вес нетто</label>
-              <input type="text" id ="product_massa1"  required >
-            </div>
-            <div class="table_add_product_item">
-              <label for = "product_massa2">Вес брутто</label>
-              <input type="text" id ="product_massa2"  required >
-            </div>
-            <div class="table_add_product_item">
-              <label for = "product_narxi">Нархи</label>
-              <input type="text" id ="product_narxi" placeholder="Нархини киритинг" required >
-            </div>
-          </div>
-          <div class="table_add_product_buttons">
-              <p id = "table_add_product_button_finish" ><img src="icons/check.png" alt="">Тугатиш</p>
-              <p id = "table_add_product_button_add"><img src="icons/add_button.png" alt=""> Кушиш</p>
-          </div>
-      </div>
-    </div>
-  
 
-  
-  
+
+
+
+
+
+
+
+
+
+
+
+  <!-- shartnomalarni ko'rish -->
     <div class = "container hidden " id = "contract_table">
-      <div class="close " id = "contract_table_close" >
-        <button><img src="icons/close2.png" alt="" width="25px" height="25px"></button>
-     </div>
-      <div class = "contract_table_search">
-          <div>
-            <input  class = "contract_table_search_input" id = "contract_table_input" placeholder="Кидириш" type="text">
+        <div class="close " id = "contract_table_close" >
+            <button><img src="icons/close2.png" alt="" width="25px" height="25px"></button>
+        </div>
+        <div class = "contract_table_search">
             <div>
-              <img class = "contract_table_search_image" src="icons/search2.png" alt="">
+                <input  class = "contract_table_search_input" id = "contract_table_input" placeholder="Кидириш" type="text">
+                <div>
+                    <img class = "contract_table_search_image" src="icons/search2.png" alt="">
+                </div>
             </div>
-          </div>
-      </div>
-      <table id="" class="contact_table" style="width:100%">
-        <thead class = "contact_table_thead">
-            <tr class = "contact_table_thead_tr">
-                <th style="width: 90px;" >Счет</th>
-                <th>Номи</th>
-                <th>Адрес</th>
-                <th>Тел</th>
-                <th style = "width: 30px;">Pdf</th>
-                <th style = "width: 30px;">Print</th>
-            </tr>
-        </thead>
-        <tbody class = "contact_table_tbody" id = "contact_table_tbody">
+        </div>
+        <table id="" class="contact_table" style="width:100%">
+            <thead class = "contact_table_thead">
+                <tr class = "contact_table_thead_tr">
+                    <th style="width: 90px;" >Счет</th>
+                    <th>Номи</th>
+                    <th>Адрес</th>
+                    <th>Тел</th>
+                    <th style = "width: 30px;">Pdf</th>
+                    <th style = "width: 30px;">Print</th>
+                </tr>
+            </thead>
+            <tbody class = "contact_table_tbody" id = "contact_table_tbody">
 
-          
-        </tbody>
-      </table>
-      <div class = "contact_table_pagenition">
-        <ul class="contact_table_pagenition_ul">
-          <li class="page-item">
-            <a class="page-link" id = "previos_page2"><img src="icons/left.png " alt="" width="10px" height="10px"></a>
-          </li>
-          <li class="page-item hidden">
-            <a class="page-link " id = "previos_page">1</a>
-          </li>
-          <li class="page-item hidden" id = "no_page1" >
-            <a class="page-link" style = "border: 0">...</a>
-          </li>
-          <li class="page-item ">
-            <a class="page-link active" id = "current_page">1</a>
-          </li>
-          <li class="page-item " >
-            <a class="page-link" id = "next_page">2 </a>
-          </li>
-          <li class="page-item " >
-            <a class="page-link" id = "next_page3">3 </a>
-          </li>
-          <li class="page-item hidden" id = "no_page" >
-            <a class="page-link" style = "border: 0">...</a>
-          </li>
-          <li class="page-item">
-            <a class="page-link" id = "last_page" >3</a>
-          </li>
-          <li class="page-item">
-            <a class="page-link" id = "next_page2" ><img src="icons/next.png " alt="" width="10px" height="10px"></a>
-          </li>
-        </ul>
-      </div>
+            
+            </tbody>
+        </table>
+        <div class = "contact_table_pagenition">
+            <ul class="contact_table_pagenition_ul">
+                <li class="page-item">
+                    <a class="page-link" id = "previos_page2"><img src="icons/left.png " alt="" width="10px" height="10px"></a>
+                </li>
+                <li class="page-item hidden">
+                    <a class="page-link " id = "previos_page">1</a>
+                </li>
+                <li class="page-item hidden" id = "no_page1" >
+                    <a class="page-link" style = "border: 0">...</a>
+                </li>
+                <li class="page-item ">
+                    <a class="page-link active" id = "current_page">1</a>
+                </li>
+                <li class="page-item " >
+                    <a class="page-link" id = "next_page">2 </a>
+                </li>
+                <li class="page-item " >
+                    <a class="page-link" id = "next_page3">3 </a>
+                </li>
+                <li class="page-item hidden" id = "no_page" >
+                    <a class="page-link" style = "border: 0">...</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" id = "last_page" >3</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" id = "next_page2" ><img src="icons/next.png " alt="" width="10px" height="10px"></a>
+                </li>
+            </ul>
+        </div>
     </div>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Shaxsiy malumotlarni ko'rish -->
     <div id = "info_table" class="container hidden">
-      <div class="close " id = "info_table_close" >
-        <button><img src="icons/close2.png" alt="" width="25px" height="25px"></button>
-      </div>
-      <div id = "" class = "">
-      <header>Шахсий малумотлар</header>
-      <div class = "form2">
-          <div class="form first">
-              <div class="details personal">
-                  <div class="fields">
-                      <div class="input-field">
-                          <label>Номи</label>
-                          <input type="text" placeholder="Номини киритинг" required id = "info_table_name">
-                      </div>
-                      <div class="input-field">
-                        <label>Адрес (вилоят)</label>
-                        <input type="text" placeholder="Адресни киритинг" required  id = "info_table_address1">
-                      </div>
-                      <div class="input-field">
-                        <label>Адрес (туман)</label>
-                        <input type="text" placeholder="Адресни киритинг" required id = "info_table_address2">
-                      </div>
-                      <div class="input-field">
-                        <label>Банк Стир</label>
-                        <input type="text" placeholder="Банк Стирни киритинг" required id = "info_table_bank">
-                      </div>
-                      <div class="input-field">
-                        <label>Дата 1</label>
-                        <input type="text" placeholder="Дата 1ни киритинг" required id = "info_table_data1">
-                      </div>
-                      <div class="input-field">
-                        <label>Инн</label>
-                        <input type="text" placeholder="Иннни киритинг" required id = "info_table_inn">
-                      </div>
-                      <div class="input-field">
-                        <label>Дата 3</label>
-                        <input type="text" placeholder="Дата 3ни киритинг" required id = "info_table_data3">
-                      </div>
-                      <div class="input-field">
-                          <label>Тел 1</label>
-                          <input type="number" placeholder="Тел 1ни киритинг" required id = "info_table_phone1">
-                      </div>
-                      <div class="input-field">
-                        <label>Тел 2</label>
-                        <input type="number" placeholder="Тел 2ни киритинг" required id = "info_table_phone2">
-                      </div>
-                  </div>
-              </div>
-
-              
-
-              <button class="nextBtn" id = "info_table_save">
-                  <span class="btnText">Саклаш</span>
-                  <i class="uil uil-navigator"><img class = "dashboard_image" src="icons/save.png" alt="" style = "margin: 5px 0 0 5px" width="14px" height="14px"></i>
-              </button>
-            
-          </div>
-
-          
+        <div class="close " id = "info_table_close" >
+            <button><img src="icons/close2.png" alt="" width="25px" height="25px"></button>
         </div>
-      </div>
+        <div id = "" class = "">
+            <header>Шахсий малумотлар</header>
+            <div class = "form2">
+                <div class="form first">
+                    <div class="details personal">
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>Номи</label>
+                                <input type="text" placeholder="Номини киритинг" required id = "info_table_name">
+                            </div>
+                            <div class="input-field">
+                                <label>Адрес (вилоят)</label>
+                                <input type="text" placeholder="Адресни киритинг" required  id = "info_table_address1">
+                            </div>
+                            <div class="input-field">
+                                <label>Адрес (туман)</label>
+                                <input type="text" placeholder="Адресни киритинг" required id = "info_table_address2">
+                            </div>
+                            <div class="input-field">
+                                <label>Банк Стир</label>
+                                <input type="text" placeholder="Банк Стирни киритинг" required id = "info_table_bank">
+                            </div>
+                            <div class="input-field">
+                                <label>Дата 1</label>
+                                <input type="text" placeholder="Дата 1ни киритинг" required id = "info_table_data1">
+                            </div>
+                            <div class="input-field">
+                                <label>Инн</label>
+                                <input type="text" placeholder="Иннни киритинг" required id = "info_table_inn">
+                            </div>
+                            <div class="input-field">
+                                <label>Дата 3</label>
+                                <input type="text" placeholder="Дата 3ни киритинг" required id = "info_table_data3">
+                            </div>
+                            <div class="input-field">
+                                <label>Тел 1</label>
+                                <input type="number" placeholder="Тел 1ни киритинг" required id = "info_table_phone1">
+                            </div>
+                            <div class="input-field">
+                                <label>Тел 2</label>
+                                <input type="number" placeholder="Тел 2ни киритинг" required id = "info_table_phone2">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="nextBtn hidden" id = "info_table_save">
+                        <span class="btnText">Саклаш</span>
+                        <i class="uil uil-navigator"><img class = "dashboard_image" src="icons/save.png" alt="" style = "margin: 5px 0 0 5px" width="14px" height="14px"></i>
+                    </button>     
+                    <!-- <button class="nextBtn hidden" id = "info_table_save2">
+                        <span class="btnText">Саклаш</span>
+                        <i class="uil uil-navigator"><img class = "dashboard_image" src="icons/save.png" alt="" style = "margin: 5px 0 0 5px" width="14px" height="14px"></i>
+                    </button>            -->
+                </div>        
+            </div>
+        </div>
     </div>
     
 
@@ -452,8 +497,6 @@
     </script>
    
     <script src = "main.js" ></script>
-    <script src = "form.js"></script>
-    <script src = "table.js" ></script>
     <script src = "datatable.js" ></script>
     <script src = "shaxsiy_table.js" ></script>
   </body>
